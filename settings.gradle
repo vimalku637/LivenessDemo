@@ -1,0 +1,42 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+
+        maven {
+            credentials {
+                username "karza_android"
+                password "ZMQWUMGp2eSdexZkQMyQ"
+            }
+            authentication{
+                basic(BasicAuthentication)
+            }
+            url "https://api.bitbucket.org/2.0/repositories/" + "krzandroid/sdk/src/releases/"
+
+        }
+
+        maven {
+            credentials {
+                username "karza_android"
+                password "ZMQWUMGp2eSdexZkQMyQ"
+            }
+            authentication{
+                basic(BasicAuthentication)
+            }
+            url "https://api.bitbucket.org/2.0/repositories/" + "krzandroid/libinternal/src/releases/"
+
+        }
+    }
+}
+rootProject.name = "ClientLivenessDemo"
+include ':app'

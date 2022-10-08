@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPhotoUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Photo Upload"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlShowImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPhotoUpload"
+        android:layout_marginTop="10dp">
+
+        <com.sdk.karzalivness.KLivenessView
+            android:id="@+id/kLiveView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:klive_background="@color/white"
+            app:klive_circle_width="5dp"
+            app:klive_color_has_face="@color/green_color"
+            app:klive_color_invalid_face="@color/red_color"
+            app:klive_color_no_face="@color/yellow_color"
+            app:klive_time_out_second="15" />
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSelfie"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="45dp"
+            android:elevation="2dp"
+            android:src="@drawable/ic_user"
+            android:visibility="gone"
+            app:civ_border_color="@color/green_color"
+            app:civ_border_width="5dp" />-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvHelpUsVerifyItsYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlShowImage"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Help us verify it's you"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCaptureSelfieForKYCVerification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHelpUsVerifyItsYou"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Capture a selfie for KYC verification"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:drawableEnd="@drawable/ic_baseline_photo_camera_24"
+        android:paddingStart="70dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="70dp"
+        android:paddingBottom="15dp"
+        android:text="Open Camera"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
